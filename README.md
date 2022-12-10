@@ -1,1 +1,1 @@
-﻿
+﻿# Templar Blog
