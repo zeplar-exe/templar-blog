@@ -26,4 +26,6 @@ StackOverflow was very unhelpful in this regard. The only solutions given were v
 
 ---------------
 
-So what was the solution? Just make it a haphazard NUnit extension. Easy, and less code for me in general. Now to actually flush it out...
+<br/>
+
+So what was the solution? Just make it a haphazard NUnit extension. Easy, and less code for me in general. Now to actually flesh it out...
