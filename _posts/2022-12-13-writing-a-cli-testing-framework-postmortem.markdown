@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "Writing a CLI Testing Framework - A Postmortem"
 date:   2022-12-13 8:23:10 -0800
