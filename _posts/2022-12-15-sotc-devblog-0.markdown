@@ -7,4 +7,6 @@ categories: devblog
 
 *Name of this project is goofy and thus not final*
 
+------
+
 I've always liked grand strategy games.
