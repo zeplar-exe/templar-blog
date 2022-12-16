@@ -4,9 +4,9 @@ title:  "Writing a CLI Testing Framework - A Postmortem"
 date:   2022-12-13 8:23:10 -0800
 categories: jekyll update
 ---
-As it turns out, writing a [testing framework](https://github.com/zeplar-exe/ClUnit/tree/1.1.0) isn't all that simple. The actual library was a breeze, no doubt. However, one detail I overlooked was the `dotnet test` command. 
+As it turns out, writing a [testing framework](https://github.com/zeplar-exe/ClUnit/tree/1.1.0) isn't all that simple. The actual library was a breeze, no doubt. However, one detail I overlooked was the `dotnet test` command. `dotnet test` calls `testhost.exe`, a file that gets built based the [Microsoft.NET.Test.Sdk](https://www.nuget.org/packages/Microsoft.NET.Test.SDK) package (I think). The test host, to my knowledge, is hard-coded to work with nunit, xunit, and maybe a few others.
 
-My [original idea](https://zeplar-exe.github.io/templar-blog/jekyll/update/2022/12/10/writing-a-cli-testing-framework.html) made use of a test runner console app, and the library itself. The runner would load an assembly and attempt to find any `ClITestAttribute` attached to methods. Of course, this immediately ran into reflection, versioning, and other issues:
+Thus, my [original idea](https://zeplar-exe.github.io/templar-blog/jekyll/update/2022/12/10/writing-a-cli-testing-framework.html) made use of a test runner console app alongside the library itself. The runner would load an assembly and attempt to find any `ClITestAttribute` attached to methods. Of course, this immediately ran into reflection, versioning, and other issues:
 
 1. What if the target assembly isn't using the same package version of the runner? (the runner referenced the NuGet package)
 
@@ -28,4 +28,4 @@ StackOverflow was very unhelpful in this regard. The only solutions given were v
 
 <br/>
 
-So what was the solution? Just make it a haphazard NUnit extension. Easy, and less code for me in general. Now to actually flesh it out...
+So what was the solution? Just make it a haphazard NUnit extension. There was really nothing special about my "framework". You could run Cmd commands, and I had a few assertions in place, but there was no real reason to make it separate from everything else.
