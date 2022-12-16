@@ -2,7 +2,7 @@
 layout: post
 title:  "Writing a CLI Testing Framework - A Postmortem"
 date:   2022-12-13 8:23:10 -0800
-categories: jekyll update
+categories: generaldev
 ---
 As it turns out, writing a [testing framework](https://github.com/zeplar-exe/ClUnit/tree/1.1.0) isn't all that simple. The actual library was a breeze, no doubt. However, one detail I overlooked was the `dotnet test` command. `dotnet test` calls `testhost.exe`, a file that gets built based the [Microsoft.NET.Test.Sdk](https://www.nuget.org/packages/Microsoft.NET.Test.SDK) package (I think). The test host, to my knowledge, is hard-coded to work with nunit, xunit, and maybe a few others.
 

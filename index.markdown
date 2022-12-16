@@ -4,3 +4,5 @@
 
 layout: home
 ---
+
+make it so the home page is general-dev, and have pages for dev blogs and whatnot
