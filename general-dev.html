@@ -1,9 +1,10 @@
 ---
-layout: page
+layout: home
 permalink: /general-dev/
 title: General Dev
 ---
 
-{% for post in site.categories.generaldev %}
- <li><span>{{ post.date | date_to_string }}</span> &nbsp; <a href="{{ post.url }}">{{ post.title }}</a></li>
-{% endfor %}
+{% unless post.category == "photo"%}
+    {% comment %} List posts... {% endcomment %}
+{% endunless %}
+
