@@ -2,7 +2,7 @@
 layout: post
 title:  "Writing a CLI Testing Framework"
 date:   2022-12-10 5:40:21 -0800
-categories: jekyll update
+categories: general-dev
 ---
 Today, I embarked on revisiting some older projects of mine. Among the mix,
 there were things like [OpenMaps](https://github.com/zeplar-exe/OpenMaps),
