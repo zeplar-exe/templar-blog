@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "States of the Country - Devblog #0"
+title:  "States of the Country - Devlog #0"
 date:   2022-12-16 5:31:31 -0800
-categories: devblog
+categories: devlog
 ---
 
 *Name of this project is goofy and thus not final*

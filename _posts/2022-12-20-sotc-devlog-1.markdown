@@ -1,8 +1,8 @@
 ﻿---
 layout: post
-title:  "States of the Country - Devblog #1 \"Configuration\""
+title:  "States of the Country - Devlog #1 \"Configuration\""
 date:   2022-12-20 8:23:01 -0800
-categories: devblog
+categories: devlog
 ---
 
 One big part of my game design philosophy is the ability for the user to do whatever they want. Not just in the game, but in how the game itself functions. Of which is easily achieved by external configuration files. What do I mean by that? Literally just a couple hundred JSON files shipped with the executable.
